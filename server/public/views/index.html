@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app ="heroApp">
+  <head>
+    <meta charset="utf-8">
+    <title>DSK Portal</title>
+    <script src="../vendor/angular/angular.min.js"></script>
+    <script src= "../assets/scripts/client.min.js"></script>
+  </head>
+  <body ng-controller = "HeroController">
+    <div class="container">
+      <div class="form">
+        <h2>Enter a new hero</h2>
+        <input type="text" ng-model="hero.alias" placeholder="Alias"/>
+        <input type="text" ng-model="hero.first_name" placeholder="First name"/>
+        <input type="text" ng-model="hero.last_name" placeholder="Last name"/>
+        <input type="text" ng-model="hero.city" placeholder="City"/>
+        <input type="text" ng-model="hero.power_name" placeholder="Superpower"/>
+        <button ng-click="addHero()">Submit</button>
+      </div>
+
+      <div class="hero_display">
+        <div ng-repeat="hero in heroList">
+          <h3>{{hero.alias}}</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
