@@ -6,7 +6,7 @@ app.controller('HeroController', ['$scope', '$http', function($scope, $http) {
   $scope.hero = {};
   $scope.heroList = [];
 
-  controller.getHeroes = function() {
+  $scope.getHeroes = function() {
     controller.hero = {};
     $http.get('/heroes/getAll').then(function(response) {
       $scope.heroList = response.data;
