@@ -21,6 +21,9 @@
       <div class="hero_display">
         <div ng-repeat="hero in heroList">
           <h3>{{hero.alias}}</h3>
+          <p>{{hero.first_name}} {{hero.last_name}}, {{hero.city}}</p>
+          <p>{{hero.power_name}}</p>
+          <button ng-click="deleteHero(hero)">Remove</button>
         </div>
       </div>
     </div>

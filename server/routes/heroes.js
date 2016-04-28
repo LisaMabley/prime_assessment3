@@ -37,7 +37,19 @@ router.post('/add', function(request, response) {
     } else {
       response.sendStatus(200);
     }
-  })
+  });
+});
+
+router.delete('/delete/:id', function(request, response) {
+  Hero.findByIdAndRemove(request.params.id, function(err) {
+    if(err) {
+      console.log(err);
+      response.sendStatus(500);
+
+    } else {
+      response.sendStatus(200);
+    }
+  });
 });
 
 module.exports = router;
